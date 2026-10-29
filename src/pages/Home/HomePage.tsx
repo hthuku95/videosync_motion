@@ -53,7 +53,7 @@ export function HomePage() {
           <Box sx={{ py: { xs: 7, md: 11 }, maxWidth: 780 }}>
             <motion.div variants={rise} initial="hidden" animate="show" custom={0}>
               <Chip
-                label="Daily Manim motion graphics"
+                label="Daily animated motion graphics"
                 color="primary"
                 variant="outlined"
                 sx={{ mb: 3 }}

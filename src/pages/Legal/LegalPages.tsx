@@ -36,7 +36,7 @@ export function TermsPage() {
   return (
     <LegalShell title="Terms of Service" updated="October 2026">
       <Section title="1. The service">
-        VideoSync Motion (“we”, “us”) provides AI-generated motion-graphics campaigns: Manim explainers, whiteboard
+        VideoSync Motion (“we”, “us”) provides AI-generated motion-graphics campaigns: animated explainers, whiteboard
         sketches, kinetic typography, infographics, algorithm visualizations,
         pitch decks, recaps, and isometric scenes, posted to social accounts
         you connect. Output is AI-generated content based on your brief and source

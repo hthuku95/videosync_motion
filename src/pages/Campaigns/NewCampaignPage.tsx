@@ -58,7 +58,7 @@ export default function NewCampaignPage() {
   return (
     <Box sx={{ p: 3, maxWidth: 720, mx: 'auto' }}>
       <Typography variant="h5" fontWeight={700} sx={{ mb: 1 }}>
-        New Manim Services Campaign
+        New Motion Services Campaign
       </Typography>
       <Typography variant="body2" color="text.secondary" sx={{ mb: 3 }}>
         One $149/mo subscription covers everything here. 3 posts a day, auto-rendered and posted.
