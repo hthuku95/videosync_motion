@@ -5,6 +5,7 @@ import {
 } from '@mui/material';
 import { campaignService } from '@/services/campaign.service';
 import { getFeatureFlags } from '@/services/features.service';
+import { CampaignComingSoon } from '@/components/marketing/CampaignComingSoon';
 
 const SERVICES = [{ value: 'manim_explainer', label: 'Manim Explainer', hint: '' }, { value: 'whiteboard_animation', label: 'Whiteboard Animation', hint: '' }, { value: 'kinetic_typography', label: 'Kinetic Typography', hint: '' }, { value: 'animated_infographic', label: 'Animated Infographic', hint: '' }, { value: 'algorithm_viz', label: 'Algorithm Viz', hint: '' }, { value: 'investor_pitch', label: 'Investor Pitch', hint: '' }, { value: 'year_in_review', label: 'Year in Review', hint: '' }, { value: 'isometric_explainer', label: 'Isometric Explainer', hint: '' }] as const;
 
@@ -79,12 +80,7 @@ export default function NewCampaignPage() {
       {flagsLoading ? (
         <Box sx={{ display: 'flex', justifyContent: 'center', py: 6 }}><CircularProgress /></Box>
       ) : !campaignsEnabled ? (
-        <Alert severity="info" sx={{ mb: 2 }}>
-          <Typography variant="body2" fontWeight={700}>Monthly campaigns — coming soon</Typography>
-          <Typography variant="body2" color="text.secondary">
-            {campaignsMessage || 'Monthly campaigns are coming soon. One-time bundles (10 videos for $50 or 30 for $100) are available in the meantime.'}
-          </Typography>
-        </Alert>
+        <CampaignComingSoon message={campaignsMessage} />
       ) : (
       <>
       <Typography variant="body2" color="text.secondary" sx={{ mb: 3 }}>
