@@ -22,7 +22,7 @@ import type {
  *   POST /api/website-video/payment/paypal/create  → create PayPal order + pending bundle
  *   POST /api/website-video/payment/paypal/capture → capture PayPal order, grant credits
  *   POST /api/website-video/generate           → create landing_page delivery (decrement credit)
- *   GET  /api/website-video/videos             → list the user's deliveries
+ *   GET  /api/motion/videos                    → list the user's motion-service deliveries
  *
  * The existing GET /api/paypal/config returns { client_id, offers } for the JS SDK.
  */
@@ -80,7 +80,7 @@ export const websiteVideoService = {
   },
 
   listVideos: async (): Promise<Delivery[]> => {
-    const { data } = await api.get<VideosResponse>('/api/website-video/videos');
+    const { data } = await api.get<VideosResponse>('/api/motion/videos');
     if (!data.success) throw new Error(data.error || 'Failed to list videos');
     return data.deliveries || [];
   },
